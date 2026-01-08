@@ -1,0 +1,31 @@
+{
+  "report_metadata": {
+    "report_type": "Patient Accessibility Analysis",
+    "condition": "Lung Cancer",
+    "trial_type": "Interventional",
+    "reporting_period": {
+      "start_date": "2025-12-01",
+      "end_date": "2025-12-31"
+    }
+  },
+  "analysis_metrics": {
+    "total_trials_analyzed": 73,
+    "average_barrier_score": 1.37,
+    "baseline_comparison": {
+      "baseline": 1.15,
+      "status": "High Selectivity",
+      "delta": "+0.22"
+    }
+  },
+  "highest_barrier_trial": {
+    "nct_id": "NCT07300150",
+    "barrier_score": 5.4,
+    "title": "A Study of PT0511 in Participants With KRAS Mutated or Amplified Advanced Solid Tumors",
+    "facility_location": {
+      "facility_name": "Dana-Farber/Massachusetts General Hospital, Inc",
+      "city": "Boston",
+      "state_province": "Massachusetts",
+      "country": "United States"
+    }
+  }
+}
