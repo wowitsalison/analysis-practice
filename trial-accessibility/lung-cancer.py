@@ -2,6 +2,7 @@ import requests
 import time
 import re
 import json
+from datetime import datetime, timedelta
 
 def get_trials(start_date, end_date):
     base_url = "https://clinicaltrials.gov/api/v2/studies"
@@ -101,8 +102,11 @@ def find_facility_info(nct_id):
     }
 
 # Execution Parameters
-start_date = "2025-12-01"
-end_date = "2025-12-31"
+today = datetime.today()
+first_day_this_month = today.replace(day=1)
+last_day_last_month = first_day_this_month - timedelta(days=1)
+start_date = last_day_last_month.replace(day=1).strftime("%Y-%m-%d")
+end_date = last_day_last_month.strftime("%Y-%m-%d")
 
 print("Fetching trials...")
 trials = get_trials(start_date, end_date)
